@@ -1,4 +1,9 @@
 package com.ride.sharing.service;
 
-public class RideShareService {
+import com.ride.sharing.domain.AvailableRide;
+
+import java.util.List;
+
+public interface RideShareService {
+    List<AvailableRide> getAllRide();
 }
