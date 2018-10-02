@@ -16,6 +16,23 @@ public class RideShareServiceImpl implements RideShareService {
 
     @Override
     public List<AvailableRide> getAllRide(){
+
         return availableRideRepository.findAll();
+    }
+
+    @Override
+    public List<AvailableRide> getRideByOrigin(String origin){
+
+        return availableRideRepository.findByOrigin(origin);
+    }
+    @Override
+    public List<AvailableRide> getRideByDestination(String destination){
+
+        return availableRideRepository.findByDestination(destination);
+    }
+    @Override
+    public List<AvailableRide> getRideByOriginAndDestination(String origin,String destination){
+
+        return availableRideRepository.findByOriginAndDestination(origin,destination);
     }
 }
