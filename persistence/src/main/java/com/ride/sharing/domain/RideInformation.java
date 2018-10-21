@@ -3,13 +3,11 @@ package com.ride.sharing.domain;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "RIDE_INFORMATION")
 @Data
-public class AvailableRide implements Serializable {
-
+public class RideInformation{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "RIDE_ID")
